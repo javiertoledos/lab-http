@@ -1,0 +1,37 @@
+version: "3.3"
+
+services:
+  traefik:
+    image: "traefik:v2.2"
+    container_name: "traefik"
+    command:
+      - "--providers.docker=true"
+      - "--providers.docker.exposedbydefault=false"
+      - "--entrypoints.web.address=:80"
+    ports:
+      - "8080:80"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
+
+  helloworld:
+    image: nginx
+    volumes:
+      - ./sites/hello-world/files:/usr/share/nginx/html
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.helloworld.rule=Host(`hello.localtest.me`)"
+
+  lab:
+    image: nginx
+    volumes:
+      - ./sites/lab/files:/srv/lab
+      - ./sites/lab/conf.d:/etc/nginx/conf.d
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.lab.rule=Host(`lab.localtest.me`) || Host(`hotlink.localtest.me`)"
+  
+  whoami:
+    image: "containous/whoami"
+
+  whoami2:
+    image: "containous/whoami"
