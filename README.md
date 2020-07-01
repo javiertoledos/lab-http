@@ -12,6 +12,7 @@ utilizando **Nginx** como servidor y **httpie** como cliente.
 
 ## Práctica
 
+### Instalando un cliente de consola
 Instala [httpie](https://httpie.org/):
 
 ```bash
@@ -27,3 +28,9 @@ http https://example.com/
 El resultado del comando debería ser algo similar a esto:
 ![](images/http-example-response.png)
 
+La línea de status indica la versión de protocolo y el codigo de la respuesta,
+en este caso, el código 200 representa una respuesta de éxito. Las líneas de
+header representan metainformación de la respuesta como el tipo de contenido
+e información de caché. Finalmente el contenido de la respuesta puede ser
+cualquier información arbitraria, en este caso en específico es un documento
+html.
