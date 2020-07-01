@@ -110,5 +110,33 @@ los ejercicios del laboratorio
     1. ¿Qué encabezados envía generalmente un reverse proxy al servidor de
       origen?
 
+## Entrega
+1. Sube una foto nueva con el nombre `picture2.jpg` a la carpeta de /images 
+  mencionada en los ejercios.
+2. Actualiza el archivo `index.txt` con tu número de carné y anota las 
+  respuestas a cada inciso.
+3. Crea un archivo zip con el nombre `lab1-<numero de carne>.zip`. Es requerido
+  respetar este nombre ya que se evaluará con una herramienta automática el 
+  laboratorio y en caso de no seguir instrucciones, no se evaluará la respuesta.
+4. En el archivo zip se debe colocar el contenido modificado que se descargó al
+  inicio de la práctica. Nuevamente, es importante que el archivo .zip tenga la 
+  misma estructura de directorios:  
+    **Correcto:**  
+    ```
+    lab1-20072089.zip
+    ├── docker-compose.yml
+    ├── nginx.conf
+    └── sites
+        └── ... subdirectorios
+    ```
+    **Incorrecto:**  
+    ```
+    laboratorio.zip
+    └──lab1-http 
+        ├── docker-compose.yml
+        ├── nginx.conf
+        └── sites
+            └── ... subdirectorios
+    ```
 
 [traefik]: https://docs.traefik.io/
