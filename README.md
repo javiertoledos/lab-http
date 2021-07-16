@@ -26,6 +26,7 @@ http https://example.com/
 ```
 
 El resultado del comando debería ser algo similar a esto:
+
 ![](images/http-example-response.png)
 
 La línea de status indica la versión de protocolo y el codigo de la respuesta,
