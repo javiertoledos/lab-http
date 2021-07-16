@@ -1,4 +1,4 @@
-# Laboratorio 1 - HTTP
+# Laboratorio - HTTP
 
 El laboratorio consiste en revisar varias de las características de HTTP 
 utilizando **Nginx** como servidor y **httpie** como cliente.
