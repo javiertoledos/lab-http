@@ -51,7 +51,8 @@ Puedes corroborar que el ejemplo está funcionando ejecutando:
 http http://hello.localtest.me:8080/
 ```
 
-Esto debera dar como resultado: 
+Esto debera dar como resultado:
+
 ![](images/http-hello-world-response.png)
 
 De la misma manera puedes acceder desde un explorador web ingresando a la misma
